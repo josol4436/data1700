@@ -40,10 +40,30 @@ function oppgave10(){
     console.log(utMelding1 + ut + utMelding2);
 }
 //JAVASCRIPT 2
-function loopTest(){
-    let ut = "";
-    for (let i = 0; i < 10; i++){
-        ut += i + " ";
+function visPersonRegister() {
+    const personRegister = [];
+    const person1 = {
+        navn: "Line Jensen",
+        adresse: "Askerveien 82",
+        telefonnr: "12334455"
+    };
+    personRegister.push(person1);
+    const person2 = {
+        navn: "Ole Hansen",
+        adresse: "Osloveien 82",
+        telefonnr: "99887766"
+    };
+    personRegister.push(person2);
+
+    // skriv ut
+    let ut = "<table><tr>" +
+        "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
+        "</tr>";
+    for (let p of personRegister) {
+        ut += "<tr>";
+        ut += "<td>" + p.navn + "</td><td>" + p.adresse + "</td><td>" + p.telefonnr + "</td>";
+        ut += "</tr>";
     }
-    console.log(ut);
+    ut += "</table>";
+    document.getElementById("personRegister").innerHTML=ut;
 }
