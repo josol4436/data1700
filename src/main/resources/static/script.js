@@ -54,15 +54,37 @@ function visPersonRegister() {
         telefonnr: "99887766"
     };
     personRegister.push(person2);
-
+    const person3 = {
+        navn: "Johannes Sæther",
+        adresse: "Dalsbergsstien 1",
+        telefonnr: "92812345"
+    };
+    personRegister.push(person3);
+    const person4 = {
+        navn: "Hege Skjøtskift",
+        adresse: "Ekrekroken 8",
+        telefonnr: "48005692"
+    };
+    personRegister.push(person4);
+    personRegister.sort();
     // skriv ut
     let ut = "<table><tr>" +
         "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
         "</tr>";
+    let teller = 0;
     for (let p of personRegister) {
-        ut += "<tr>";
-        ut += "<td>" + p.navn + "</td><td>" + p.adresse + "</td><td>" + p.telefonnr + "</td>";
-        ut += "</tr>";
+         if(teller % 2 == 0) {
+            ut+="<tr>";
+            ut+="<td>"+p.navn+"</td><td>"+p.adresse+"</td><td>"+p.telefonnr+"</td>";
+            ut+="</tr>";
+         }
+         else {
+            ut+="<tr>";
+            ut+="<td><strong>"+p.navn+"</strong></td><td><strong>"+p.adresse+
+                 "</strong></td><td><strong>"+p.telefonnr+"</strong></td>";
+            ut+="</tr>";
+         }
+            teller++;
     }
     ut += "</table>";
     document.getElementById("personRegister").innerHTML=ut;
