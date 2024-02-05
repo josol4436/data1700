@@ -6,7 +6,7 @@
 .navigasjon {
     grid-column: 0/1;
     grid-row: 1;
-    background-color: orange;
+    background-color: darkslateblue;
     margin-top: -10px;
     margin-left: -10px;
     margin-bottom: -10px;
@@ -23,12 +23,14 @@ li {
 }
 a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 a:hover {
-    color: white;
+    font-weight: bold;
 }
 .underoverskrift{
     font-size: x-large;
     font-weight: 800;
+    color: lightblue;
+    text-decoration-line: underline;
 }
