@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript 3</title>
     <link rel="stylesheet" href="style.css">
-    <script type="application/javascript"></script>
+    <script type="application/javascript" src="javascript3.js"></script>
 </head>
 <body class="wrapper">
 <header class="navigasjon">
@@ -35,21 +35,6 @@
         </ul>
     </nav>
 </header>
-<script>
-    function skrivUt(){
-        const navn = document.getElementById("navnInn").value;
-        const alder = document.getElementById("alderInn").value;
-        let ut = "";
-
-        if (alder>0){
-            ut+= "Navn: " + navn + "Alder: " + alder;
-        }
-        else {
-            alert("Alder må være mer enn null!");
-        }
-        document.getElementById("utFelt").innerHTML = ut;
-    }
-</script>
 <main>
     <div class="oppgaver">
         <h1 class="hovedoverskrift">Nettside for oppgaver i DATA1700 Webprogrammering</h1>
@@ -60,6 +45,49 @@
         <input type="number" id="alderInn"><br>
         <button onclick="skrivUt()">Trykk her</button>
         <p id="utFelt"></p>
+
+        <div>
+            <p>Konverter temperatur</p>
+            <label for="celciusInn">Skriv inn antall grader C:</label>
+            <input onchange="cTilF(this.value)" type="text" id="celciusInn"><br>
+            <br>
+            <label for="fahrenheitInn">Skriv inn antall grader F:</label>
+            <input onchange="fTilC(this.value)" type="number" id="fahrenheitInn"><br>
+        </div>
+        <div>
+            <p>Oppgave 3: Kalkulator</p>
+            <input type="number" id="tall1">
+            <label for="pluss">+</label>
+            <input type="radio" name="tegn" id="pluss" onchange="pluss()">
+            <label for="minus">-</label>
+            <input type="radio" name="tegn" id="minus" onchange="minus()">
+            <label for="gange">*</label>
+            <input type="radio" name="tegn" id="gange" onchange="gange()">
+            <label for="dele">/</label>
+            <input type="radio" name="tegn" id="dele" onchange="dele()">
+            <input type="number" id="tall2">
+            <br>
+            <p id="utTall"></p>
+            <br>
+            <h1 class="hovedoverskrift">Javascript 3 - Person register med arrays og input felter</h1>
+
+            <label for="navn">Navn: </label>
+            <input type="text" id="navn"><br>
+            <label for="adresse">Adresse: </label>
+            <input type="text" id="adresse"><br>
+            <label for="telefonnr">Telefonnr: </label>
+            <input type="text" id="telefonnr"><br>
+
+            <button onclick="registrerNy()">Registrer ny</button>
+            <br>
+            <button onclick="visPersonRegister()">Vis personregister</button>
+            <div id="personRegister"></div>
+
+            <h1 class="hovedoverskrift">Ekstaoppgave 1 og 2</h1>
+            <label for="gjøremålInn">Nytt To-do liste punkt: </label>
+            <input type="text" id="gjøremålInn" onchange="nyttGjøremål()">
+            <div id="gjøremålUt"></div>
+        </div>
     </div>
 </main>
 </body>
