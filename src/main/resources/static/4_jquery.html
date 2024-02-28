@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JQuery</title>
     <link rel="stylesheet" href="style.css">
-    <script type="application/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="application/javascript" src="jquery.js"></script>
 </head>
 <body class="wrapper">
 <header class="navigasjon">
@@ -37,9 +38,40 @@
 </header>
 <main>
     <div class="oppgaver">
-        <script src="script.js"></script>
-        <h1 class="hovedoverskrift">Nettside for oppgaver i DATA1700 Webprogrammering</h1>
-        <h2 class="underoverskrift">Laget av Sander Sletvold</h2>
+        <h1 class="hovedoverskrift">Introduksjon til jquery</h1>
+        <h2 class="underoverskrift">Oppgave 1</h2>
+        <label for="innNavn">Navn</label>
+        <!-- en input-box trenger en label ellers feilmelding -->
+        <input type="text" id="innNavn"/><br>
+        <label for="innAlder">Alder</label>
+        <!-- en input-box trenger en label ellers feilmelding -->
+        <input type="number" id="innAlder"/>
+        <button id ="knapp" >Vis melding</button>
+        <div id="navn">Navn midlertidig</div>
+        <div id="alder">Alder midlertidig</div>
+    </div>
+    <div class="oppgaver">
+        <p>Konverter temperatur</p>
+        <label for="celciusInn">Skriv inn antall grader C:</label>
+        <input type="number" id="celciusInn"><br>
+        <br>
+        <label for="fahrenheitInn">Skriv inn antall grader F:</label>
+        <input type="number" id="fahrenheitInn"><br>
+    </div>
+    <div class="oppgaver">
+        <p>Oppgave 3: Kalkulator</p>
+        <input type="number" id="tall1" value="">
+        <label>+</label>
+        <input type="radio" name="tegn" value="pluss">
+        <label>-</label>
+        <input type="radio" name="tegn" value="minus">
+        <label>*</label>
+        <input type="radio" name="tegn" value="gange">
+        <label>/</label>
+        <input type="radio" name="tegn" value="dele">
+        <input type="number" id="tall2" value="">
+        <br>
+        <p id="utTall"></p>
     </div>
 </main>
 </body>
